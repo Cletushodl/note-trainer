@@ -239,36 +239,38 @@
         // Note definitions - position 0 is middle line
         // Treble: middle line = B4, Bass: middle line = D3
         // Positions go from -6 (below staff) to +6 (above staff)
+        // Treble clef: Lines = E-G-B-D-F, Spaces = F-A-C-E
         const trebleNotes = [
-            { pos: -6, note: 'D', octave: 4 },  // ledger below
-            { pos: -5, note: 'E', octave: 4 },
-            { pos: -4, note: 'F', octave: 4 },  // first line
-            { pos: -3, note: 'G', octave: 4 },
-            { pos: -2, note: 'A', octave: 4 },
-            { pos: -1, note: 'B', octave: 4 },
-            { pos: 0, note: 'C', octave: 5 },   // middle C (ledger above bass, ledger below treble)
-            { pos: 1, note: 'D', octave: 5 },
-            { pos: 2, note: 'E', octave: 5 },
-            { pos: 3, note: 'F', octave: 5 },
-            { pos: 4, note: 'G', octave: 5 },
-            { pos: 5, note: 'A', octave: 5 },
-            { pos: 6, note: 'B', octave: 5 },   // ledger above
+            { pos: -6, note: 'C', octave: 4 },  // middle C (ledger below staff)
+            { pos: -5, note: 'D', octave: 4 },  // space below bottom line
+            { pos: -4, note: 'E', octave: 4 },  // bottom line (1st line)
+            { pos: -3, note: 'F', octave: 4 },  // 1st space
+            { pos: -2, note: 'G', octave: 4 },  // 2nd line
+            { pos: -1, note: 'A', octave: 4 },  // 2nd space
+            { pos: 0, note: 'B', octave: 4 },   // middle line (3rd line)
+            { pos: 1, note: 'C', octave: 5 },   // 3rd space
+            { pos: 2, note: 'D', octave: 5 },   // 4th line
+            { pos: 3, note: 'E', octave: 5 },   // 4th space
+            { pos: 4, note: 'F', octave: 5 },   // top line (5th line)
+            { pos: 5, note: 'G', octave: 5 },   // space above
+            { pos: 6, note: 'A', octave: 5 },   // ledger above
         ];
         
+        // Bass clef: Lines = G-B-D-F-A, Spaces = A-C-E-G
         const bassNotes = [
-            { pos: -6, note: 'F', octave: 2 },  // ledger below
-            { pos: -5, note: 'G', octave: 2 },
-            { pos: -4, note: 'A', octave: 2 },  // first line
-            { pos: -3, note: 'B', octave: 2 },
-            { pos: -2, note: 'C', octave: 3 },
-            { pos: -1, note: 'D', octave: 3 },
-            { pos: 0, note: 'E', octave: 3 },
-            { pos: 1, note: 'F', octave: 3 },
-            { pos: 2, note: 'G', octave: 3 },
-            { pos: 3, note: 'A', octave: 3 },
-            { pos: 4, note: 'B', octave: 3 },
-            { pos: 5, note: 'C', octave: 4 },   // middle C (ledger)
-            { pos: 6, note: 'D', octave: 4 },   // ledger above
+            { pos: -6, note: 'E', octave: 2 },  // ledger below
+            { pos: -5, note: 'F', octave: 2 },  // space below bottom line
+            { pos: -4, note: 'G', octave: 2 },  // bottom line (1st line)
+            { pos: -3, note: 'A', octave: 2 },  // 1st space
+            { pos: -2, note: 'B', octave: 2 },  // 2nd line
+            { pos: -1, note: 'C', octave: 3 },  // 2nd space
+            { pos: 0, note: 'D', octave: 3 },   // middle line (3rd line)
+            { pos: 1, note: 'E', octave: 3 },   // 3rd space
+            { pos: 2, note: 'F', octave: 3 },   // 4th line (F clef line)
+            { pos: 3, note: 'G', octave: 3 },   // 4th space
+            { pos: 4, note: 'A', octave: 3 },   // top line (5th line)
+            { pos: 5, note: 'B', octave: 3 },   // space above
+            { pos: 6, note: 'C', octave: 4 },   // middle C (ledger above)
         ];
         
         function setClef(clef) {
